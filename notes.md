@@ -51,6 +51,37 @@ Lock to launcher if you want.
 
 XML processing
 --------------
+
+We use the [ElementTree API](https://docs.python.org/2/library/xml.etree.elementtree.html).
+
+Prefer [lxml](http://lxml.de/) implementation and fallback to the [default](http://effbot.org/zone/element-index.htm):
+
+    try:
+      from lxml import etree
+      print("running with lxml.etree")
+    except ImportError:
+      try:
+        # Python 2.5
+        import xml.etree.cElementTree as etree
+        print("running with cElementTree on Python 2.5+")
+      except ImportError:
+        try:
+          # Python 2.5
+          import xml.etree.ElementTree as etree
+          print("running with ElementTree on Python 2.5+")
+        except ImportError:
+          try:
+            # normal cElementTree install
+            import cElementTree as etree
+            print("running with cElementTree")
+          except ImportError:
+            try:
+              # normal ElementTree install
+              import elementtree.ElementTree as etree
+              print("running with ElementTree")
+            except ImportError:
+              print("Failed to import ElementTree from any known place")
+
 References
 
 - [Processing XML in Python with ElementTree](http://eli.thegreenplace.net/2012/03/15/processing-xml-in-python-with-elementtree)
@@ -60,6 +91,7 @@ References
 - [The lxml.etree Tutorial](http://lxml.de/tutorial.html)
 
 ### XMI
+
 References:
 
 - [Working XML: UML, XMI, and code generation](http://gusconstan.com/webservices/xmi/index.htm)
