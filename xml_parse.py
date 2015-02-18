@@ -69,4 +69,4 @@ def parseXML(xml_file):
 
 #----------------------------------------------------------------------
 if __name__ == "__main__":
-    parseXML("appt.xml")
+    parseXML("./data/appt.xml")

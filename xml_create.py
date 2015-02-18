@@ -38,4 +38,4 @@ def createXML(filename):
 
 #----------------------------------------------------------------------
 if __name__ == "__main__":
-    createXML("appt.xml")
+    createXML("./data/appt.xml")
