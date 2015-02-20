@@ -99,4 +99,5 @@ References:
 - [The UML DTD and what is needed](http://www.gupro.de/mirror/xig/xmi.the_uml_dtd/xmi_the_uml_dtd.htm)
 - [xmi2code project](https://github.com/charlycoste/xmi2code)
 - [PlantUML](http://plantuml.sourceforge.net/xmi.html)
+- [Modelio](https://www.modelio.org/component/content/article/1-about-modelio/29-detailed-feature-list.html#other)
 
